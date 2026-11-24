@@ -1,0 +1,88 @@
+.product-showcase-section {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 48px;
+  overflow: hidden;
+}
+
+/* Side decorative elements */
+.deco-lego-brick {
+  position: absolute;
+  left: 20px;
+  top: 90px;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 8px rgba(48, 35, 25, 0.08));
+}
+
+.deco-teal-ring {
+  position: absolute;
+  right: 40px;
+  top: 110px;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 8px rgba(48, 35, 25, 0.08));
+}
+
+.showcase-header {
+  margin-bottom: 20px;
+}
+
+.showcase-tag {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--accent-orange);
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 5;
+}
+
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .products-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 16px;
+    margin-left: -18px;
+    margin-right: -18px;
+    padding-left: 18px;
+    padding-right: 18px;
+    gap: 14px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .products-grid::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .products-grid::-webkit-scrollbar-thumb {
+    background: var(--border-subtle);
+    border-radius: var(--radius-full);
+  }
+
+  .products-grid .product-card {
+    flex: 0 0 240px;
+    scroll-snap-align: start;
+  }
+
+  .deco-lego-brick,
+  .deco-teal-ring {
+    display: none;
+  }
+}
