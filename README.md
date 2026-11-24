@@ -1,2 +1,3 @@
 #Description:
-This is a landing page of our startup toying idea. This is just for demonstrating Git workflows and not the actual working project. Stay tuned for updates...
+This is a landing page of our startup toying idea. This is just for demonstrating Git workflows and not the actual working project. The repository has been updated now.
+Have fun exploring the updated repo.
